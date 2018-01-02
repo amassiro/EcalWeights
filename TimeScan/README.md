@@ -1,6 +1,21 @@
 Dump pulse shapes
 ----
 
+
+    
+Useful code for pulse shape analysis by E. Di Marco
+
+    https://twiki.cern.ch/twiki/bin/viewauth/CMS/SWGuideCMSPhysicsObjectSchool2017ECAL
+
+Code:
+
+    https://github.com/emanueledimarco/EcalReconstruction
+
+
+
+    
+    
+
 DAS input
 
     https://cmsweb.cern.ch/das/request?view=list&limit=50&instance=prod%2Fglobal&input=dataset%3D%2FAlCaPhiSym%2FRun2017*%2FRAW
