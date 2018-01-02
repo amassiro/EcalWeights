@@ -1,7 +1,10 @@
 Dump pulse shapes
 ----
 
+Where:
 
+    /afs/cern.ch/user/a/amassiro/work/ECAL/LocalReco/CMSSW_9_2_7/src/EcalWeights/TimeScan/
+    
     
 Useful code for pulse shape analysis by E. Di Marco
 
