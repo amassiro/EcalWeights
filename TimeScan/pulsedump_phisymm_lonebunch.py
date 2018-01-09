@@ -83,8 +83,8 @@ process.source = cms.Source("PoolSource",
                             )
 
 
-#process.TFileService = cms.Service("TFileService", fileName = cms.string("templates.root") )
-process.TFileService = cms.Service("TFileService", fileName = cms.string("templates2.root") )
+process.TFileService = cms.Service("TFileService", fileName = cms.string("templates.root") )
+#process.TFileService = cms.Service("TFileService", fileName = cms.string("templates2.root") )
 
 # start from RAW format for more flexibility
 #process.raw2digi_step = cms.Sequence(process.RawToDigi)

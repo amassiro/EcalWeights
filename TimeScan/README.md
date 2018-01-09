@@ -58,5 +58,33 @@ Dump:
     cc.cd(2);
     pulse_tree->Draw("pulse:position","abs(pulse[5])<1000 && pulse > 0  && barrel  && lumi > 30", "colz")
 
+
+    
+Crab
+====
+
+See details in:
+
+    https://twiki.cern.ch/twiki/bin/view/CMSPublic/WorkBookCRAB3Tutorial#CRAB_configuration_parameters
+    https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile
+
+check if I have writing permissions:
+
+    source /cvmfs/cms.cern.ch/crab3/crab.sh
+    voms-proxy-init --voms cms
+
+    crab checkwrite --site=T2_CH_CERN
+    crab checkwrite --site=T2_CH_CERN  --lfn=/store/user/amassiro/ECAL/
+    crab checkwrite --site=T2_CH_CERN  --lfn=/store/group/dpg_ecal/alca_ecalcalib/amassiro/
+
+
+multicrab 
+
+    python multicrab.py  samples.py        
+    python multicrab.py  crab_projects_9Jan2018        status
+    
+    
+    
+    
     
     
