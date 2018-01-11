@@ -59,6 +59,17 @@ Dump:
     pulse_tree->Draw("pulse:position","abs(pulse[5])<1000 && pulse > 0  && barrel  && lumi > 30", "colz")
 
 
+    pulseDump->cd()
+    pulse_tree->Draw("pulse:position:lumi","abs(pulse[5])<1000 && pulse > 0  && barrel ")
+
+    pulse_tree->Draw("pulse:position:lumi","abs(pulse[5])<1000 && pulse > 0  && rawid==838940311 ")
+    pulse_tree->Draw("pulse:position:lumi","abs(pulse[5])<1000 && pulse > 0  && rawid==838969077 ")
+    
+    pulse_tree->Draw("pulse:position:rawid","abs(pulse[5])<1000 && pulse > 0 ")
+    
+    
+    
+    
     
 Crab
 ====
@@ -83,7 +94,7 @@ multicrab
     python multicrab.py  samples.py        
     python multicrab.py  crab_projects_9Jan2018        status
     
-    
+    ls /eos/cms/store/user/amassiro/ECAL/TimeScan/AlCaPhiSym/crab_TimeScan/180109_092402/0000/    
     
     
     
