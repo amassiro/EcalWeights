@@ -13,12 +13,15 @@
 //   last col (doFitBaseline) --> 1 (baseline)
 //
 // tPeak = time [ns] of the pulse maximum w.r.t. sample 0 (sample i is at t = i * 6.25 ns)
+//         default 31.25 ns = sample 5, as in the phase-2 simulation:
+//         binOfMaximum = 6 (ecalSimParameterMap_cff.py), phaseShift = 1 (EcalDigiProducer_Ph2.cc),
+//         tzero = timeToRise - 6.25 * (binOfMaximum - phaseShift) (EBHitResponse.icc)
 //
 // Output: weights in a text file, one line per parameter (amplitude, [amplitude*dt], [baseline])
 //
 // Run:
 //   root -l -q 'LocalCreateWeightsPhase2.cxx("tmp/shape_TB2025_v1.txt", "weights_TB2025_v1.txt")'
-//   root -l -q 'LocalCreateWeightsPhase2.cxx("tmp/shape_TB2025_v1.txt", "weights_TB2025_v1.txt", 32.25, true, true, true)'
+//   root -l -q 'LocalCreateWeightsPhase2.cxx("tmp/shape_TB2025_v1.txt", "weights_TB2025_v1.txt", 31.25, true, true, true)'
 //
 
 
@@ -33,7 +36,7 @@ float interpolate(std::vector<float>& x, std::vector<float>& y, float xx) {
 }
 
 
-void LocalCreateWeightsPhase2(std::string shapeFile = "tmp/shape_TB2025_v1.txt", std::string outputFile = "weights_Phase2.txt", float tPeak = 32.25, bool doFitBaseline = true, bool doFitTime = true, bool useNoiseCorrelation = false) {
+void LocalCreateWeightsPhase2(std::string shapeFile = "tmp/shape_TB2025_v1.txt", std::string outputFile = "weights_Phase2.txt", float tPeak = 31.25, bool doFitBaseline = true, bool doFitTime = true, bool useNoiseCorrelation = false) {
 
   std::cout << " Create phase-2 weights from pulse shape: " << shapeFile << std::endl;
 

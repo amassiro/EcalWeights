@@ -40,11 +40,11 @@ Dump the simulation pulse shape from the conditions DB (via Frontier, no CMSSW n
 Create the weights (16 samples, amplitude, amplitude*dt, baseline):
 
     root -l -q 'LocalCreateWeightsPhase2.cxx("tmp/shape_TB2025_v1.txt", "tmp/weights_TB2025_v1.txt")'
-    root -l -q 'LocalCreateWeightsPhase2.cxx("tmp/shape_TB2025_v1.txt", "tmp/weights_TB2025_v1.txt", 32.25, true, true, true)'
+    root -l -q 'LocalCreateWeightsPhase2.cxx("tmp/shape_TB2025_v1.txt", "tmp/weights_TB2025_v1.txt", 31.25, true, true, true)'
 
 Where:
 
-    tPeak = time [ns] of the pulse maximum w.r.t. sample 0 (default 32.25 ns)
+    tPeak = time [ns] of the pulse maximum w.r.t. sample 0 (default 31.25 ns = sample 5, as in the phase-2 simulation)
     last argument = use noise correlation G10 from 2023 TB (SimCalorimetry/EcalSimProducers/python/ecalDigiParameters_Ph2_cff.py)
 
 NB: the CMSSW default ampWeights are NOT reproduced with the TB2025 shape (max difference ~0.06 with
